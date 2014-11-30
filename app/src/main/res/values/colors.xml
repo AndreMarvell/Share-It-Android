@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#ffff0000</color>
+    <color name="green">#ff00ff00</color>
+    <color name="zt_green">#ff769f34</color>
+    <color name="lightgreen">#ff99d74d</color>
+    <color name="icon_reunion_green">#ff62e750</color>
+    <color name="icon_reunion_gray">#ff221f1a</color>
+    <color name="icon_reunion_red">#ffdd4f4a</color>
+    <color name="programme_item_pressed">#ffdddddd</color>
+    <color name="menu_item_pressed">#FF2F2A23</color>
+    <color name="transparent">#00000000</color>
+</resources>
