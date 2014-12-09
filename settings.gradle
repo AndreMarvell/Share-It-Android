@@ -1,1 +1,1 @@
-include ':app', ':actionbarsherlock', ':slidingmenu'
+include ':app', ':actionbarsherlock', ':slidingmenu', ':facebook'
