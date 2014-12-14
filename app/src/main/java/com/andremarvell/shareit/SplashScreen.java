@@ -1,26 +1,39 @@
 package com.andremarvell.shareit;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 import com.andremarvell.shareit.R;
 
 
-public class SplashScreen extends Activity {
+public class SplashScreen extends SherlockFragmentActivity {
+
+    private FBLoginFragment mainFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
-    }
 
+        if (savedInstanceState == null) {
+            // Add the fragment on initial activity setup
+            mainFragment = new FBLoginFragment();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(android.R.id.content, mainFragment)
+                    .commit();
+        } else {
+            // Or set the fragment from restored state info
+            mainFragment = (FBLoginFragment) getSupportFragmentManager()
+                    .findFragmentById(android.R.id.content);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.splash_screen, menu);
+        getSupportMenuInflater().inflate(R.menu.splash_screen, menu);
         return true;
     }
 

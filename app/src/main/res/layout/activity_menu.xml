@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#fff"
+tools:context=".BaseSlidingMenu">
+
+    <LinearLayout
+        android:id="@+id/autocompletionBlock"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="@color/menu_top_back">
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/nophoto"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/menu_top_text"
+                android:text="J. Fukushimix"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/localite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/menu_top_text"
+                android:text="Troyes"
+                android:textSize="10sp"
+                android:layout_marginBottom="10dp" />
+            <TextView
+                android:id="@+id/credits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/menu_top_text"
+                android:text="0 Crédits"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/menu_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+</LinearLayout>
